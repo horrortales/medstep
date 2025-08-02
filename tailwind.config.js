@@ -6,12 +6,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'noto': ['NotoSansCondensed-Regular', 'system-ui', 'sans-serif'],
-        'noto-light': ['NotoSansCondensed-Light'],
-        'noto-medium': ['NotoSansCondensed-Medium'],
-        'noto-bold': ['NotoSansCondensed-Bold'],
-        'noto-semibold': ['NotoSansCondensed-SemiBold'],
-        'noto-black': ['NotoSansCondensed-Black'],
+        'poppins': ['Poppins-Regular', 'system-ui', 'sans-serif'],
+        'poppins-thin': ['Poppins-Thin'],
+        'poppins-extralight': ['Poppins-ExtraLight'],
+        'poppins-light': ['Poppins-Light'],
+        'poppins-medium': ['Poppins-Medium'],
+        'poppins-semibold': ['Poppins-SemiBold'],
+        'poppins-bold': ['Poppins-Bold'],
+        'poppins-extrabold': ['Poppins-ExtraBold'],
+        'poppins-black': ['Poppins-Black'],
       },
       colors: {
         'french_gray': {

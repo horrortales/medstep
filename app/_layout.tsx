@@ -9,14 +9,15 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded] = useFonts({
-    'NotoSansCondensed-Regular': require('../assets/fonts/NotoSans_Condensed-Regular.ttf'),
-    'NotoSansCondensed-Light': require('../assets/fonts/NotoSans_Condensed-Light.ttf'),
-    'NotoSansCondensed-Medium': require('../assets/fonts/NotoSans_Condensed-Medium.ttf'),
-    'NotoSansCondensed-Bold': require('../assets/fonts/NotoSans_Condensed-Bold.ttf'),
-    'NotoSansCondensed-SemiBold': require('../assets/fonts/NotoSans_Condensed-SemiBold.ttf'),
-    'NotoSansCondensed-Black': require('../assets/fonts/NotoSans_Condensed-Black.ttf'),
-    'NotoSansCondensed-Thin': require('../assets/fonts/NotoSans_Condensed-Thin.ttf'),
-    'NotoSansCondensed-ExtraBold': require('../assets/fonts/NotoSans_Condensed-ExtraBold.ttf'),
+    'Poppins-Regular': require('../assets/fonts/Poppins-Regular.ttf'),
+    'Poppins-Thin': require('../assets/fonts/Poppins-Thin.ttf'),
+    'Poppins-ExtraLight': require('../assets/fonts/Poppins-ExtraLight.ttf'),
+    'Poppins-Light': require('../assets/fonts/Poppins-Light.ttf'),
+    'Poppins-Medium': require('../assets/fonts/Poppins-Medium.ttf'),
+    'Poppins-SemiBold': require('../assets/fonts/Poppins-SemiBold.ttf'),
+    'Poppins-Bold': require('../assets/fonts/Poppins-Bold.ttf'),
+    'Poppins-ExtraBold': require('../assets/fonts/Poppins-ExtraBold.ttf'),
+    'Poppins-Black': require('../assets/fonts/Poppins-Black.ttf'),
   });
 
   useEffect(() => {
@@ -29,5 +30,7 @@ export default function RootLayout() {
     return null;
   }
 
-  return <Stack />;
+  return <Stack>
+    <Stack.Screen name="index" options={{ headerShown: false }} />
+  </Stack>;
 }

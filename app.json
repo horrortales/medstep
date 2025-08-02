@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "medstep",
+    "name": "MedStep",
     "slug": "medstep",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -16,7 +16,8 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.official.medstep"
     },
     "web": {
       "bundler": "metro",
@@ -40,6 +41,13 @@
     },
     "assetBundlePatterns": [
       "assets/fonts/*"
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "1878a420-e5c5-40b8-928f-799356d7ae71"
+      }
+    },
+    "owner": "horrortales"
   }
 }
