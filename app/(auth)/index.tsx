@@ -127,20 +127,20 @@ export default function Page() {
                 {/* Features Preview - Professional */}
                 <Animated.View
                     entering={FadeInUp.delay(800).duration(800)}
-                    className="flex-row justify-center space-x-10 mb-6"
+                    className="flex-row justify-center space-x-10 mb-6 gap-4"
                 >
                     <View className="items-center">
-                        <View className="w-10 h-10 bg-french_gray-800 rounded-xl items-center justify-center mb-2 mr-5">
+                        <View className="w-10 h-10 bg-french_gray-800 rounded-xl items-center justify-center mb-2">
                             <MaterialIcons name="quiz" size={18} color="#b8b8d1" />
                         </View>
-                        <Text className="text-xs font-poppins text-french_gray-400 mr-5">10K+ MCQs</Text>
+                        <Text className="text-xs font-poppins text-french_gray-400 ">10K+ MCQs</Text>
                     </View>
 
                     <View className="items-center">
-                        <View className="w-10 h-10 bg-french_gray-800 rounded-xl items-center justify-center mb-2 mr-5">
+                        <View className="w-10 h-10 bg-french_gray-800 rounded-xl items-center justify-center mb-2">
                             <MaterialIcons name="trending-up" size={18} color="#b8b8d1" />
                         </View>
-                        <Text className="text-xs font-poppins text-french_gray-400 mr-5">Track Progress</Text>
+                        <Text className="text-xs font-poppins text-french_gray-400 ">Track Progress</Text>
                     </View>
 
                     <View className="items-center">
