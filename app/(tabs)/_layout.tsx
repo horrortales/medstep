@@ -1,4 +1,4 @@
-import { Ionicons, MaterialIcons } from '@expo/vector-icons'
+import { Ionicons } from '@expo/vector-icons'
 import { Tabs } from 'expo-router'
 import React from 'react'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -10,24 +10,29 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: '#ff6b6c',
-        tabBarInactiveTintColor: '#9ca3af',
+        tabBarInactiveTintColor: '#6b7280',
         tabBarStyle: {
           backgroundColor: '#ffffff',
-          borderTopWidth: 1,
-          borderTopColor: '#f3f4f6',
-          height: 85 + insets.bottom,
-          paddingBottom: insets.bottom + 25,
-          paddingTop: 10,
+          borderTopWidth: 0.5,
+          borderTopColor: '#e5e7eb',
+          height: 65 + insets.bottom,
+          paddingBottom: insets.bottom + 8,
+          paddingTop: 8,
+          paddingHorizontal: 16,
           shadowColor: '#000',
-          shadowOffset: { width: 0, height: -2 },
-          shadowOpacity: 0.1,
-          shadowRadius: 8,
-          elevation: 10,
+          shadowOffset: { width: 0, height: -4 },
+          shadowOpacity: 0.08,
+          shadowRadius: 12,
+          elevation: 8,
         },
         tabBarLabelStyle: {
-          fontSize: 11,
-          fontWeight: '600',
-          marginTop: 4,
+          fontSize: 10,
+          fontWeight: '500',
+          marginTop: 2,
+          fontFamily: 'Poppins-Medium',
+        },
+        tabBarItemStyle: {
+          paddingVertical: 4,
         },
         headerShown: false,
       }}>
@@ -36,9 +41,9 @@ export default function TabLayout() {
         options={{
           title: 'Dashboard',
           tabBarIcon: ({ color, focused }) => (
-            <MaterialIcons
-              name={focused ? 'dashboard' : 'dashboard'}
-              size={24}
+            <Ionicons
+              name={focused ? 'grid' : 'grid-outline'}
+              size={22}
               color={color}
             />
           ),
@@ -50,9 +55,9 @@ export default function TabLayout() {
         options={{
           title: 'Questions',
           tabBarIcon: ({ color, focused }) => (
-            <MaterialIcons
-              name={focused ? 'quiz' : 'quiz'}
-              size={24}
+            <Ionicons
+              name={focused ? 'library' : 'library-outline'}
+              size={22}
               color={color}
             />
           ),
@@ -63,9 +68,9 @@ export default function TabLayout() {
         options={{
           title: 'Tests',
           tabBarIcon: ({ color, focused }) => (
-            <MaterialIcons
-              name={focused ? 'assignment' : 'assignment'}
-              size={24}
+            <Ionicons
+              name={focused ? 'document-text' : 'document-text-outline'}
+              size={22}
               color={color}
             />
           ),
@@ -76,9 +81,9 @@ export default function TabLayout() {
         options={{
           title: 'Analytics',
           tabBarIcon: ({ color, focused }) => (
-            <MaterialIcons
-              name={focused ? 'analytics' : 'analytics'}
-              size={24}
+            <Ionicons
+              name={focused ? 'bar-chart' : 'bar-chart-outline'}
+              size={22}
               color={color}
             />
           ),
@@ -90,8 +95,8 @@ export default function TabLayout() {
           title: 'Profile',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? 'person' : 'person-outline'}
-              size={24}
+              name={focused ? 'person-circle' : 'person-circle-outline'}
+              size={22}
               color={color}
             />
           ),
