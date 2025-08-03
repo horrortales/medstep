@@ -4,6 +4,7 @@ import { useFonts } from "expo-font";
 import { Slot } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import "../global.css";
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -32,11 +33,13 @@ export default function RootLayout() {
   }
 
   return (
-    <ClerkProvider
-      tokenCache={tokenCache}
-      publishableKey={process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!}
-    >
-      <Slot />
-    </ClerkProvider>
+    <SafeAreaProvider>
+      <ClerkProvider
+        tokenCache={tokenCache}
+        publishableKey={process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!}
+      >
+        <Slot />
+      </ClerkProvider>
+    </SafeAreaProvider>
   );
 }
