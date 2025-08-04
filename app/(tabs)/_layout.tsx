@@ -10,40 +10,43 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: '#ff6b6c',
-        tabBarInactiveTintColor: '#6b7280',
+        tabBarInactiveTintColor: '#000',
         tabBarStyle: {
           backgroundColor: '#ffffff',
-          borderTopWidth: 0.5,
-          borderTopColor: '#e5e7eb',
+          borderTopWidth: 1,
+          borderTopColor: '#f1f5f9',
           height: 65 + insets.bottom,
           paddingBottom: insets.bottom + 8,
           paddingTop: 8,
-          paddingHorizontal: 16,
-          shadowColor: '#000',
-          shadowOffset: { width: 0, height: -4 },
-          shadowOpacity: 0.08,
-          shadowRadius: 12,
-          elevation: 8,
+          paddingHorizontal: 20,
+          shadowColor: '#6366f1',
+          shadowOffset: { width: 0, height: -8 },
+          shadowOpacity: 0.1,
+          shadowRadius: 16,
+          elevation: 12,
         },
         tabBarLabelStyle: {
-          fontSize: 10,
-          fontWeight: '500',
-          marginTop: 2,
-          fontFamily: 'Poppins-Medium',
+          fontSize: 11,
+          fontWeight: '600',
+          marginTop: 4,
+          fontFamily: 'Poppins-SemiBold',
+          letterSpacing: 0.3,
         },
         tabBarItemStyle: {
-          paddingVertical: 4,
+          paddingVertical: 2,
+          borderRadius: 12,
+          marginHorizontal: 2,
         },
         headerShown: false,
       }}>
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Dashboard',
+          title: 'Home',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? 'grid' : 'grid-outline'}
-              size={22}
+              name={focused ? 'home' : 'home-outline'}
+              size={24}
               color={color}
             />
           ),
@@ -53,11 +56,11 @@ export default function TabLayout() {
       <Tabs.Screen
         name="question-bank"
         options={{
-          title: 'Questions',
+          title: 'Study',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? 'library' : 'library-outline'}
-              size={22}
+              name={focused ? 'book' : 'book-outline'}
+              size={24}
               color={color}
             />
           ),
@@ -66,11 +69,11 @@ export default function TabLayout() {
       <Tabs.Screen
         name="tests"
         options={{
-          title: 'Tests',
+          title: 'Exams',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? 'document-text' : 'document-text-outline'}
-              size={22}
+              name={focused ? 'clipboard' : 'clipboard-outline'}
+              size={24}
               color={color}
             />
           ),
@@ -79,11 +82,11 @@ export default function TabLayout() {
       <Tabs.Screen
         name="analytics"
         options={{
-          title: 'Analytics',
+          title: 'Progress',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? 'bar-chart' : 'bar-chart-outline'}
-              size={22}
+              name={focused ? 'trending-up' : 'trending-up-outline'}
+              size={24}
               color={color}
             />
           ),
@@ -92,11 +95,11 @@ export default function TabLayout() {
       <Tabs.Screen
         name="profile"
         options={{
-          title: 'Profile',
+          title: 'Account',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons
-              name={focused ? 'person-circle' : 'person-circle-outline'}
-              size={22}
+              name={focused ? 'person' : 'person-outline'}
+              size={24}
               color={color}
             />
           ),
